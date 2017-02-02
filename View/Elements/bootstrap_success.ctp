@@ -1,0 +1,1 @@
+<div class="alert alert-success"><b><?php echo __('Well done!'); ?></b> <?php echo __($message); ?></div>

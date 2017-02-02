@@ -1,0 +1,10 @@
+{
+    "name": "website-skeleton",
+    "require": {
+        "cakephp/cakephp": "2.5.*",
+        "recaptcha/php5": "v1.1.0"
+    },
+    "config": {
+        "vendor-dir": "Vendor/"
+    }
+}

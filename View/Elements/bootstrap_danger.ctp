@@ -1,0 +1,1 @@
+<div class="alert alert-danger"><b><?php echo __('Oh snap!'); ?></b> <?php echo __($message); ?></div>
