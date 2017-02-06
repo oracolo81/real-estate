@@ -7,28 +7,27 @@
                         <div class="row">
                             <form role="form">
                                 <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="<?=SearchRequest::ADVERT_TYPE?>"<?=($searchRequest->getAdvertTypeFriendlyName() == "for-sale")?" checked=\"checked\"":"" ?> value="for-sale"><?php echo __("Buy");?>
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="<?=SearchRequest::ADVERT_TYPE?>"<?=($searchRequest->getAdvertTypeFriendlyName() == "to-let")?" checked=\"checked\"":"" ?> value="to-let"><?php echo __("To Let");?>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group"> 
-                                        <input class="form-control" type="text" name="text" placeholder='<?php echo __("Enter keywords...");?>'>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <div class="form-group">
-                                        <label class="radio-inline">
-                                            <input type="radio" onchange="onPropertyCategorySelect(this);" name="<?=SearchRequest::PROPERTY_CATEGORY?>" data-category-id="1" <?=($searchRequest->getPropertyCategoryFriendlyName() == "residential" || !$searchRequest->isSearching())?" checked=\"checked\"":"" ?> value="residential"> <?=__("Residential")?>
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" onchange="onPropertyCategorySelect(this);" name="<?=SearchRequest::PROPERTY_CATEGORY?>" data-category-id="2" <?=($searchRequest->getPropertyCategoryFriendlyName() == "commercial")?" checked=\"checked\"":"" ?> value="commercial"> <?=__("Commercial")?>
-                                        </label>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="<?=SearchRequest::ADVERT_TYPE?>"<?=($searchRequest->getAdvertTypeFriendlyName() == "for-sale")?" checked=\"checked\"":"" ?> value="for-sale"><?php echo __("Buy");?>
+                                                </label><br>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="<?=SearchRequest::ADVERT_TYPE?>"<?=($searchRequest->getAdvertTypeFriendlyName() == "to-let")?" checked=\"checked\"":"" ?> value="to-let"><?php echo __("To Let");?>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label class="radio-inline">
+                                                    <input type="radio" onchange="onPropertyCategorySelect(this);" name="<?=SearchRequest::PROPERTY_CATEGORY?>" data-category-id="1" <?=($searchRequest->getPropertyCategoryFriendlyName() == "residential" || !$searchRequest->isSearching())?" checked=\"checked\"":"" ?> value="residential"> <?=__("Residential")?>
+                                                </label><br>
+                                                <label class="radio-inline">
+                                                    <input type="radio" onchange="onPropertyCategorySelect(this);" name="<?=SearchRequest::PROPERTY_CATEGORY?>" data-category-id="2" <?=($searchRequest->getPropertyCategoryFriendlyName() == "commercial")?" checked=\"checked\"":"" ?> value="commercial"> <?=__("Commercial")?>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6">

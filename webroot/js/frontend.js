@@ -25,6 +25,5 @@ $(function(){
         } else {
             $("#search-bedrooms").removeAttr("disabled");
         }
-        console.log(this);
     });
 });

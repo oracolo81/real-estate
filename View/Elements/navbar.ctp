@@ -15,11 +15,13 @@
             <ul class="nav navbar-nav navbar-right">
                 <li <?= (!empty($page) && $page['custom_link'] == "home") ? 'class="active"' : ''; ?>><a href="<?=$this->Html->url('/');?>"><?php echo __("Home");?></a></li>
                 <li <?= (!empty($page) && $page['custom_link'] == "properties") ? 'class="active"' : ''; ?>><a href="<?=$this->Html->url('/properties');?>"><?php echo __("Properties");?></a></li>
-                <li <?= (!empty($page) && $page['custom_link'] == "about") ? 'class="active"' : ''; ?>><a href="<?=$this->Html->url('/about');?>"><?php echo __("About");?></a></li>
                 <li <?= (!empty($page) && $page['custom_link'] == "contact") ? 'class="active"' : ''; ?>><a href="<?=$this->Html->url('/contact-us');?>"><?php echo __("Contacts");?></a></li> 
                 <li>
-                    <?=$this->Html->link($this->Html->image('/img/gb.png') .' '. __("Eng"), array('language' => 'eng'), array('class' => 'lang', 'escape' => false));?>
-                    <?=$this->Html->link($this->Html->image('/img/it.png') .' '. __("Ita"), array('language' => 'ita'), array('class' => 'lang', 'escape' => false));?>
+                    <?php if ($this->Session->read('Config.language') == 'eng') { ?>
+                        <?=$this->Html->link($this->Html->image('/img/it.png') .' '. __("Ita"), array('language' => 'ita'), array('class' => 'lang', 'escape' => false));?>
+                    <?php } else { ?>
+                        <?=$this->Html->link($this->Html->image('/img/gb.png') .' '. __("Eng"), array('language' => 'eng'), array('class' => 'lang', 'escape' => false));?>
+                    <?php } ?>
                 </li>    
             </ul>
         </div>

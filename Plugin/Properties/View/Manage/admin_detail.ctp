@@ -124,23 +124,23 @@ $type_editor = Configure::read('type_editor');
         </div>
         <div class="col-lg-6 col-md-12">
             <div class="form-group">
-                <label class="control-label" for="category">Categoria</label>
-                <select class="form-control required" id="category" name="data[Property][property_category_id]">
+                <label class="control-label" for="property-category">Categoria</label>
+                <select class="form-control required" id="property-category" name="data[Property][property_category_id]">
                     <option value="">Categoria</option>
                     <?php
                     foreach ($propertyCategories as $key => $value) {
                         if ( isset($propertyDetails) && ($propertyDetails['Property']['property_category_id'] == $key) ) { ?>
-                            <option value="<?=$key;?>" selected><?=$value;?></option>
+                            <option data-category-id="<?=$key;?>" value="<?=$key;?>" selected><?=$value;?></option>
                         <?php } else { ?>
-                            <option value="<?= $key; ?>"><?= $value; ?></option>
+                            <option data-category-id="<?=$key;?>" value="<?= $key; ?>"><?= $value; ?></option>
                         <?php }
                     }
                     ?>
                 </select>
             </div>
             <div class="form-group">
-                <label class="control-label" for="type">Tipo</label>
-                <select class="form-control required" id="type" name="data[Property][property_type_id]">
+                <label class="control-label" for="property-type">Tipo</label>
+                <select class="form-control required" id="property-type" name="data[Property][property_type_id]">
                     <option value="">Tipo</option>
                     <?php if (!empty($propertyTypes)) {
                         foreach ($propertyTypes as $propertyType) {

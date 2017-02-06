@@ -15,7 +15,7 @@
                                                 $class = ($image['is_default']) ? "active" : "";
                                                 ?>
                                                 <li data-target="#slider-property" data-slide-to="<?php echo $key; ?>" class="<?php echo $class; ?>">
-                                                    <img src="/properties/img/<?php echo $image['file_name']; ?>" alt="<?php echo $image['description']; ?>">
+                                                    <img src="/properties/img/thumb/<?php echo $image['file_name']; ?>" alt="<?php echo $image['description']; ?>">
                                                 </li>
                                                 <?php
                                             }

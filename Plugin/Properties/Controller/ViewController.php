@@ -3,7 +3,7 @@ App::uses("SearchRequest", "Lib");
 
 class ViewController extends PropertiesAppController
 {
-    const ITEMS_PER_PAGE = 4;
+    const ITEMS_PER_PAGE = 9;
 
 	var $uses = array(
         "Pages.Page",
@@ -17,7 +17,8 @@ class ViewController extends PropertiesAppController
     var $components = array(
         'Pages',
         'RequestHandler',
-        'Session'
+        'Session',
+        'Paginator'
     );
 
 	public function beforeFilter() 
@@ -32,12 +33,17 @@ class ViewController extends PropertiesAppController
         if (isset($page)) {
             $this->set("page", $page['Page']);
         }
+        $searchRequest = new SearchRequest();
+
+        if (!empty($this->params["named"])) {
+            $searchRequest->hydrate($this->params["named"]);
+        }
+        $this->set("searchRequest", $searchRequest);
+        $this->prepareSearchFormData();
     }
 
 	public function index()
     {
-    	$conditions = array("Property.is_published" => AppModel::REC_STATUS_ACTIVE);
-
         $searchRequest = new SearchRequest();
 
         if (!empty($this->params["named"])) {
@@ -57,27 +63,17 @@ class ViewController extends PropertiesAppController
 
         $this->Property->locale = $this->Session->read('Config.language');
 
-        $properties = $this->Property->find(
-            "all",
-            $findOptions
+        $this->paginate = array(
+            'Property' => $findOptions
         );
-
-        $this->set("propertyCategories", $this->getPropertyCategories());
-        $this->set("propertyTypes", $this->getPropertyTypes());
-        $this->set("locations", $this->getLocations());
-        $this->set("path", "/" . $this->plugin . "/img/thumb/");
+        $properties = $this->paginate('Property');
+        $this->set("properties", $properties);
 
         $findOptions = array(
             "conditions" => $searchRequest->getFindConditions(),
             "group" => "Property.id"
         );
         $findOptions["conditions"][] = array("Property.is_published" => AppModel::REC_STATUS_ACTIVE);
-
-        $this->paginate = $findOptions;
-        $properties = $this->paginate('Property');
-        
-        $this->set("properties", $properties);
-
         $count = $this->Property->find(
             "count",
             $findOptions
@@ -89,6 +85,14 @@ class ViewController extends PropertiesAppController
 		
 	public function detail($id = "")
     {
+        $searchRequest = new SearchRequest();
+
+        if (!empty($this->params["named"])) {
+            $searchRequest->hydrate($this->params["named"]);
+        }
+        $this->set("searchRequest", $searchRequest);
+        
+        $this->prepareSearchFormData();
         if (!empty($id)) {
             $aProperty = $this->loadPropertyById($id);
             $this->set("propertyDetails", $aProperty);
@@ -109,8 +113,10 @@ class ViewController extends PropertiesAppController
 
     protected function prepareSearchFormData()
     {
-        $this->set("locations", $this->getLocations());
+        $this->set("propertyCategories", $this->getPropertyCategories());
         $this->set("propertyTypes", $this->getPropertyTypes());
+        $this->set("locations", $this->getLocations());
+        $this->set("path", "/" . $this->plugin . "/img/thumb/");
     }
 			
 	private function _formatDate($date){

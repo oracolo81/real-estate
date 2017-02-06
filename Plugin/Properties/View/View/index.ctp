@@ -56,13 +56,17 @@
                             <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="property-container">
                                     <a href="http://<?=$_SERVER['HTTP_HOST']?>/properties/<?=$property['Property']['id']?>/<?=$custom_link?>">
-                                        <div class="property-image">
+                                        <?php if ($property['DefaultImage']['file_name'] != "") {
+                                            $pic_url = "/properties/img/" . $property['DefaultImage']['file_name'];
+                                        } else {
+                                            $pic_url ="/img/no-picture.gif";
+                                        }?>
+                                        <div class="property-image" style='background-image: url("<?=$this->Html->url($pic_url);?>")'>
                                             <?php if ($property['DefaultImage']['file_name'] != "") {
                                                 $pic_url = "/properties/img/" . $property['DefaultImage']['file_name'];
                                             } else {
                                                 $pic_url ="/img/no-picture.gif";
                                             }?>
-                                            <img src="<?=$this->Html->url($pic_url);?>" alt="mikha real estate theme">
                                             <div class="property-price">
                                                 <h4><?=$property['Property']['title'];?></h4>
                                                 <?php if (!empty($property['Property']['price'])) { ?>
@@ -76,13 +80,13 @@
                                     </a>
                                     <div class="property-features">
                                         <?php if (!empty($property['Property']['size'])) { ?>
-                                            <span><i class="fa fa-home"></i><?php echo $property['Property']['size']; ?> m<sup>2</sup></span>
+                                            <span><i class="fa fa-codepen"></i> <?php echo $property['Property']['size']; ?> m<sup>2</sup></span>
                                         <?php } ?>
                                         <?php if (!empty($property['Property']['bedrooms'])) { ?>
-                                            <span><i class="fa fa-hdd-o"></i><?php echo $property['Property']['bedrooms']; ?> <?php echo __("Bed"); ?></span>
+                                            <span><i class="fa fa-bed"></i> <?php echo $property['Property']['bedrooms']; ?> <?php echo __("Bed"); ?></span>
                                         <?php } ?>
                                         <?php if (!empty($property['Property']['bathrooms'])) { ?>
-                                            <span><i class="fa fa-male"></i><?php echo $property['Property']['bathrooms']; ?> <?php echo __("Bath"); ?></span>
+                                            <span><i class="fa fa-bath"></i> <?php echo $property['Property']['bathrooms']; ?> <?php echo __("Bath"); ?></span>
                                         <?php } ?>
                                     </div>
                                     <div class="property-content">

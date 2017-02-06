@@ -18,6 +18,7 @@
             echo $this->Html->css('plugins/bootstrap-switch.min.css');
             echo $this->Html->css('admin-theme.css?='.filemtime("css/admin-theme.css"));
             echo $this->fetch('css');
+            echo $this->Html->script('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
         ?>
     </head>
     <body>
@@ -63,7 +64,6 @@
         <?php echo $this->element('multiple_delete'); ?>
 
         <?php
-            echo $this->Html->script('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
             echo $this->Html->script('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js');
             echo $this->Html->script('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
             echo $this->Html->script('//ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js');
