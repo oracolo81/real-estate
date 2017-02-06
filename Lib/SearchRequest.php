@@ -125,16 +125,16 @@ class SearchRequest
             }
             $conditions[$entity . "." . AppModel::LOCATION] = $locationIds;
         }
+        if ($this->getPropertyCategory()) {
+            $propertyCategory = $this->getPropertyCategory();
+            $conditions[$entity . "." . AppModel::PROPERTY_CATEGORY] = $propertyCategory["PropertyCategory"]["id"];
+        }
         if ($this->getPropertyType()) {
             $propertyTypeIds = array();
             foreach ($this->getPropertyType() as $propertyType) {
                 $propertyTypeIds[] = $propertyType["PropertyType"]["id"];
             }
             $conditions[$entity . "." . AppModel::PROPERTY_TYPE] = $propertyTypeIds;
-        }
-        if ($this->getPropertyCategory()) {
-            $propertyCategory = $this->getPropertyCategory();
-            $conditions[$entity . "." . AppModel::PROPERTY_CATEGORY] = $propertyCategory["PropertyCategory"]["id"];
         }
         if ($this->getBedrooms()) {
             if (strpos($this->getBedrooms(), '+') !== false) {

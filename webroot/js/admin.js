@@ -439,3 +439,24 @@ $(function(){
         });
     }});
 });
+
+$(function(){
+    $("#property-category").on("change", function(){
+        var categoryId = $(this).find(":selected").attr("data-category-id");
+        if (!categoryId) {
+            $("#property-type").val('').find("option[value!='']").show().prop('disabled', false);
+        } else {
+            $("#property-type").val('').find("option[value!='']").hide().prop('disabled', true).filter('[data-property-category-id=' + categoryId + ']').show().prop('disabled', false);;
+        }
+    });
+
+    $("#property-type").on("change", function(){
+        var category = $(this).find(":selected").attr("data-property-category-id");
+        if (category && category != "" && category !=1) {
+            $("#bedrooms").val('').attr("disabled", "disabled");
+        } else {
+            $("#bedrooms").removeAttr("disabled");
+        }
+        console.log(this);
+    });
+});

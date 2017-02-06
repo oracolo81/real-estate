@@ -12,9 +12,9 @@ $(document).ready(function(){
 
     /* backstretch slider */
     $('.header-slide').backstretch([
-        slides_url + "bg01.jpg",
-        slides_url + "bg02.jpg",
-        slides_url + "bg03.jpg"
+        slides_url + "first.jpg",
+        slides_url + "second.jpg",
+        slides_url + "third.jpg"
         ], {
             fade: 850,
             duration: 4000
