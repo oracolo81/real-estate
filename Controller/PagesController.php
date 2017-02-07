@@ -62,8 +62,6 @@ class PagesController extends AppController
         $this->set("propertyTypes", $this->getPropertyTypes());
 
         $this->Property->locale = $this->Session->read('Config.language');
-        $aProperties = $this->Property->GetLatest(20);
-        $this->set("aProperties", $aProperties);
 
         $latestProperties = $this->Property->GetLatest();
         $this->set("latestProperties", $latestProperties);

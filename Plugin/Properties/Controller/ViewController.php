@@ -33,13 +33,11 @@ class ViewController extends PropertiesAppController
         if (isset($page)) {
             $this->set("page", $page['Page']);
         }
-        $searchRequest = new SearchRequest();
 
-        if (!empty($this->params["named"])) {
-            $searchRequest->hydrate($this->params["named"]);
-        }
-        $this->set("searchRequest", $searchRequest);
-        $this->prepareSearchFormData();
+        $this->Property->locale = $this->Session->read('Config.language');
+
+        $latestProperties = $this->Property->GetLatest();
+        $this->set("latestProperties", $latestProperties);
     }
 
 	public function index()
@@ -91,7 +89,7 @@ class ViewController extends PropertiesAppController
             $searchRequest->hydrate($this->params["named"]);
         }
         $this->set("searchRequest", $searchRequest);
-        
+
         $this->prepareSearchFormData();
         if (!empty($id)) {
             $aProperty = $this->loadPropertyById($id);

@@ -74,7 +74,7 @@ class Property extends PropertiesAppModel
 		parent::beforeSave($options);
 	}
 
-	public function GetLatest($limit = 3)
+	public function GetLatest($limit = 4)
 	{
 		$latestProperties = $this->find('all', array(
             'conditions' => array("Property.is_published" => AppModel::REC_STATUS_ACTIVE),

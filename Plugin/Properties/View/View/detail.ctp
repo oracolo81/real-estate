@@ -8,36 +8,38 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h2><?php echo $propertyDetails['Property']['title']; ?></h2>
-                                <div id="slider-property" class="carousel slide" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <?php if (!empty($propertyDetails['PropertyImage'])) {
-                                            foreach ($propertyDetails['PropertyImage'] as $key => $image) {
-                                                $class = ($image['is_default']) ? "active" : "";
-                                                ?>
-                                                <li data-target="#slider-property" data-slide-to="<?php echo $key; ?>" class="<?php echo $class; ?>">
-                                                    <img src="/properties/img/thumb/<?php echo $image['file_name']; ?>" alt="<?php echo $image['description']; ?>">
-                                                </li>
-                                                <?php
-                                            }
-                                        } ?>
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <?php if (!empty($propertyDetails['PropertyImage'])) {
-                                            foreach ($propertyDetails['PropertyImage'] as $key => $image) {
-                                                $class = ($image['is_default']) ? "active" : "";
-                                                ?>
-                                                <div class="item <?php echo $class; ?>"><img src="/properties/img/<?php echo $image['file_name']; ?>" alt="<?php echo $image['description']; ?>"> </div>
-                                                <?php
-                                            }
-                                        } ?>
+                                <?php if (!empty($propertyDetails['PropertyImage'])) { ?>
+                                    <div id="slider-property" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <?php if (!empty($propertyDetails['PropertyImage'])) {
+                                                foreach ($propertyDetails['PropertyImage'] as $key => $image) {
+                                                    $class = ($image['is_default']) ? "active" : "";
+                                                    ?>
+                                                    <li data-target="#slider-property" data-slide-to="<?php echo $key; ?>" class="<?php echo $class; ?>">
+                                                        <img src="/properties/img/thumb/<?php echo $image['file_name']; ?>" alt="<?php echo $image['description']; ?>">
+                                                    </li>
+                                                    <?php
+                                                }
+                                            } ?>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <?php if (!empty($propertyDetails['PropertyImage'])) {
+                                                foreach ($propertyDetails['PropertyImage'] as $key => $image) {
+                                                    $class = ($image['is_default']) ? "active" : "";
+                                                    ?>
+                                                    <div class="item <?php echo $class; ?>"><img src="/properties/img/<?php echo $image['file_name']; ?>" alt="<?php echo $image['description']; ?>"> </div>
+                                                    <?php
+                                                }
+                                            } ?>
+                                        </div>
+                                        <a class="left carousel-control" href="#slider-property" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" href="#slider-property" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
                                     </div>
-                                    <a class="left carousel-control" href="#slider-property" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a class="right carousel-control" href="#slider-property" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
-                                </div>
+                                <?php } ?>
                                 <h3><?php echo __("Property Overview");?></h3>
                                 <table class="table table-bordered">
                                     <tr><td width="20%"><strong><?php echo __("ID");?></strong></td><td>#<?php echo $propertyDetails['Property']['id']; ?></td></tr>

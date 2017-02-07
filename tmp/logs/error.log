@@ -1,122 +1,20 @@
-2017-02-05 13:03:25 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/immobiliare/Plugin/Properties/View/Manage/admin_save.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/Applications/MAMP/htdocs/immobiliare/Plugin/Properties/View/Manage/admin_save.ctp',
-)
-Request URL: /admin/properties/manage/save
+2017-02-07 20:19:25 Error: [NotFoundException] Not Found
+Request URL: /properties/2/tramostera
 Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
-#1 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ManageController), Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2017-02-05 22:13:05 Error: Fatal Error (4): syntax error, unexpected ';' in [/Applications/MAMP/htdocs/immobiliare/View/Elements/navbar.ctp, line 28]
-2017-02-05 22:13:05 Error: [FatalErrorException] syntax error, unexpected ';'
-Request URL: /
+#0 /Applications/MAMP/htdocs/immobiliare/Plugin/Properties/Controller/ViewController.php(102): ViewController->loadPropertyById('2')
+#1 [internal function]: ViewController->detail('2', 'tramostera')
+#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ViewController), Array)
+#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ViewController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-02-07 20:19:50 Error: [NotFoundException] Not Found
+Request URL: /properties/2/tramostera
 Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 28)
-#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 28, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 28, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-05 22:13:38 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-05 22:13:38 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/9/sfafasf
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-05 22:13:54 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-05 22:13:54 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/9/sfafasf
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-05 22:14:06 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-05 22:14:06 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/7/last-property
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-05 22:14:15 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-05 22:14:15 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/1/titolo-italiano
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-05 22:15:10 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-05 22:15:10 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/1/titolo-italiano
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-05 22:17:46 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-05 22:17:46 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/1/titolo-italiano
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-05 22:31:14 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-05 22:31:14 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/6/cavallini
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-06 22:19:27 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-06 22:19:27 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/1/titolo-italiano
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-06 22:20:55 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-06 22:20:55 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/1/titolo-italiano
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2017-02-06 22:23:43 Error: Fatal Error (1): Call to a member function getAdvertTypeFriendlyName() on null in [/Applications/MAMP/htdocs/immobiliare/View/Elements/quick_search.ctp, line 13]
-2017-02-06 22:23:43 Error: [FatalErrorException] Call to a member function getAdvertTypeFriendlyName() on null
-Request URL: /properties/1/titolo-italiano
-Stack Trace:
-#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 13)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 13, Array)
-#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
+#0 /Applications/MAMP/htdocs/immobiliare/Plugin/Properties/Controller/ViewController.php(102): ViewController->loadPropertyById('2')
+#1 [internal function]: ViewController->detail('2', 'tramostera')
+#2 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ViewController), Array)
+#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ViewController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

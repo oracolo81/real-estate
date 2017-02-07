@@ -6,13 +6,18 @@
         <h3><?php echo __("Recent Property");?></h3>
     </div>
     <ul>
-        <li><a href="#">Luxury Villa</a></li> 
-        <li><a href="#">Land In Central Park</a></li> 
-        <li><a href="#">The Urban Life</a></li> 
-        <li><a href="#">Luxury Office</a></li> 
-        <li><a href="">Luxury Villa In Rego Park</a></li>
+        <?php
+        if (!empty($latestProperties)) {
+            foreach ($latestProperties as $property) { 
+                $custom_link = strtolower(Inflector::slug($property['Property']['title'], '-'));
+                ?>
+                <li><a href="http://<?=$_SERVER['HTTP_HOST']?>/properties/<?=$property['Property']['id']?>/<?=$custom_link?>"><?= $property['Property']['title'] ?></a></li>
+                <?php 
+            } 
+        } ?>
     </ul>
 </div>
+<!--
 <div class="widget widget-sidebar widget-white">
     <div class="widget-header">
         <h3><?php echo __("Property Type");?></h3>
@@ -26,7 +31,6 @@
         <li><a href="#">Single Family Home</a>&nbsp;(11)</li>
     </ul>
 </div>
-<!--
 <div class="widget widget-sidebar widget-white">
     <div class="widget-header">
         <h3>Top Agents</h3>

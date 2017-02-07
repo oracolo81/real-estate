@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="fax">Fax</label>
-                <input id="fax" class="form-control required" name="data[Contact][fax]" type="text" value="<?php echo isset($contactItem) ? $contactItem['Contact']['fax'] : ''; ?>" data-toggle="tooltip"  data-placement="left" title="Write your fax number" />
+                <input id="fax" class="form-control" name="data[Contact][fax]" type="text" value="<?php echo isset($contactItem) ? $contactItem['Contact']['fax'] : ''; ?>" data-toggle="tooltip"  data-placement="left" title="Write your fax number" />
             </div>
             <div class="form-group">
                 <label class="control-label" for="youtube">Youtube</label>
