@@ -9,6 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=(!empty($page)) ? $page['browser_title'] : $title_for_layout; ?></title>
     <?php
+        // TO DO fix the canonical with only one title
+        if (!empty($this->request->params['pugin'])) {
+            if ($this->request->params['pugin'] == 'properties' && $this->request->params['controller'] == 'view' && $this->request->params['action'] == 'detail') {
+                ?>
+                <link rel="canonical" href="<?='http://'.$_REQUEST['HTTP_HOST'].$_REQUEST['REQUEST_URI']?>" />
+                <?php
+            }
+        }
+    ?>
+    <?php
     echo $this->Html->meta('icon');
     echo $this->Html->css('bootstrap.min.css');
     echo $this->Html->css('font-awesome.min.css');

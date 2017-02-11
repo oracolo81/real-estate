@@ -18,3 +18,60 @@ Stack Trace:
 #4 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ViewController), Object(CakeRequest))
 #5 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2017-02-11 11:59:01 Error: [MissingHelperException] Helper class controllerHelper could not be found.
+Exception Attributes: array (
+  'class' => 'controllerHelper',
+  'plugin' => 'Properties',
+)
+Request URL: /properties/2/tramostera-english
+Stack Trace:
+#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/HelperCollection.php(66): HelperCollection->load('Properties.cont...')
+#1 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(837): HelperCollection->__isset('controller')
+#2 /Applications/MAMP/htdocs/immobiliare/View/Layouts/default.ctp(13): View->__get('controller')
+#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(948): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(910): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(542): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#9 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ViewController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-02-11 12:00:45 Error: [MissingHelperException] Helper class controllerHelper could not be found.
+Exception Attributes: array (
+  'class' => 'controllerHelper',
+  'plugin' => 'Properties',
+)
+Request URL: /properties/eng
+Stack Trace:
+#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/HelperCollection.php(66): HelperCollection->load('Properties.cont...')
+#1 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(837): HelperCollection->__isset('controller')
+#2 /Applications/MAMP/htdocs/immobiliare/View/Layouts/default.ctp(13): View->__get('controller')
+#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(948): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(910): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(542): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#9 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ViewController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-02-11 12:00:55 Error: [MissingHelperException] Helper class controllerHelper could not be found.
+Exception Attributes: array (
+  'class' => 'controllerHelper',
+  'plugin' => false,
+)
+Request URL: /
+Stack Trace:
+#0 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('controller')
+#1 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(837): HelperCollection->__isset('controller')
+#2 /Applications/MAMP/htdocs/immobiliare/View/Layouts/default.ctp(13): View->__get('controller')
+#3 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(948): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(910): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(542): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#9 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

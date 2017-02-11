@@ -32,8 +32,10 @@
 	Router::connect('/:language/pages/*', array('controller' => 'pages', 'action' => 'display'), array('language' => 'eng|ita'));
 	Router::connect('/:language/', array('controller' => 'pages', 'action' => 'display', 'home'), array('language' => 'eng|ita'));
 	Router::connect('/properties', array('plugin' => 'properties', 'controller' => 'view', 'action' => 'index'));
+	Router::connect('/properties/:language', array('plugin' => 'properties', 'controller' => 'view', 'action' => 'index'), array('language' => 'eng|ita'));
 	Router::connect('/properties/search', array('plugin' => 'properties', 'controller' => 'view', 'action' => 'search'));
 	Router::connect('/properties/:id/:slug', array('plugin' => 'properties', 'controller' => 'view', 'action' => 'detail'), array("pass" => array("id", "slug"), 'id' => '[0-9]+'));
+	Router::connect('/properties/:id/:slug/:language', array('plugin' => 'properties', 'controller' => 'view', 'action' => 'detail'), array("pass" => array("id", "slug"), 'id' => '[0-9]+', 'language' => 'eng|ita'));
 	Router::connect('/search/*', array('plugin' => 'properties', 'controller' => 'view', 'action' => 'index'));
 	
 /**
