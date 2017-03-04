@@ -23,8 +23,7 @@
                   			<div class="blog-author">PomHouses.com</div>
                 		</div>
                 		<div class="blog-title">
-                  			<h2>Our Story</h2>
-                  			<h3>...Emmm we begind from nothing</h3>
+                  			<h2>About us</h2>
                 		</div>
 
                 		<div class="blog-text">

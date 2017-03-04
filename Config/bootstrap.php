@@ -108,3 +108,5 @@ CakePlugin::loadAll(array(array("routes" => true, "bootstrap" => true)));
 App::uses('Common', 'Lib');
 App::uses('Parsedown', 'Lib');
 App::uses("Util", "Lib");
+
+Configure::write('CACHE_BREAKER', '1.0.4');

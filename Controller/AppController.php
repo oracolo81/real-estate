@@ -75,6 +75,12 @@ class AppController extends Controller
             }
             $this->set("contactInfo", $this->Contact->find('first'));
         }
+
+        $cacheBreaker = Configure::read("CACHE_BREAKER");
+        if (empty($cacheBreaker)) {
+            $cacheBreaker = 1;
+        }
+        $this->set("cacheBreaker", $cacheBreaker);
     }
 
     public function addDangerMessage($message)

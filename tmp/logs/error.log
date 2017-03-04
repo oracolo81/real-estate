@@ -75,3 +75,30 @@ Stack Trace:
 #9 /Applications/MAMP/htdocs/immobiliare/Vendor/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
 #10 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2017-02-14 19:39:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/style.cssr%3D1.0.0.css
+Stack Trace:
+#0 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-02-14 19:40:00 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/style.cssr%3D1.0.0.css
+Stack Trace:
+#0 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-02-14 19:40:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/style.cssr%3D1.0.0.css
+Stack Trace:
+#0 /Applications/MAMP/htdocs/immobiliare/webroot/index.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

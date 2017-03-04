@@ -67,6 +67,13 @@ class PagesController extends AppController
         $this->set("latestProperties", $latestProperties);
 
         $page = $this->Page->findByName('Home');
-        $this->set("page", $page['Page']); 
+        if (!empty($page)) {
+            $this->set("page", $page['Page']); 
+        }
+
+        $page2 = $this->Page->findByName('About');
+        if (!empty($page2)) {
+            $this->set("about", $page2['Page']); 
+        }
     }
 }

@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button> 
             <a class="navbar-brand" href="<?=$this->Html->url('/');?>">
-                <?=$this->Html->image('/img/logo2.png', array('class' => 'img-responsive', 'alt' => 'Logo'));?>
+                <?=$this->Html->image('/img/logo.png', array('class' => 'img-responsive', 'alt' => 'Logo'));?>
             </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-top">

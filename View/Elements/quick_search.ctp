@@ -6,9 +6,9 @@
                     <div class="quick-search">
                         <div class="row">
                             <form role="form">
-                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="row">
-                                        <div class="col-xs-6">
+                                        <div class="col-sm-5">
                                             <label class="radio-inline">
                                                 <input type="radio" name="<?=SearchRequest::ADVERT_TYPE?>"<?=($searchRequest->getAdvertTypeFriendlyName() == "for-sale")?" checked=\"checked\"":"" ?> value="for-sale"><?php echo __("Buy");?>
                                             </label><br>
@@ -16,7 +16,7 @@
                                                 <input type="radio" name="<?=SearchRequest::ADVERT_TYPE?>"<?=($searchRequest->getAdvertTypeFriendlyName() == "to-let")?" checked=\"checked\"":"" ?> value="to-let"><?php echo __("To Let");?>
                                             </label>
                                         </div>
-                                        <div class="col-xs-6">
+                                        <div class="col-sm-7">
                                             <label class="radio-inline">
                                                 <input type="radio" onchange="onPropertyCategorySelect(this);" name="<?=SearchRequest::PROPERTY_CATEGORY?>" data-category-id="1" <?=($searchRequest->getPropertyCategoryFriendlyName() == "residential" || !$searchRequest->isSearching())?" checked=\"checked\"":"" ?> value="residential"> <?=__("Residential")?>
                                             </label><br>
@@ -47,7 +47,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="form-group">
                                         <select class="form-control" name="<?=SearchRequest::LOCATIONS?>">
                                             <option><?php echo __("Location");?></option>
@@ -71,7 +71,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="form-group">
                                         <input class="form-control" type="text" name="<?=SearchRequest::MIN_PRICE?>" placeholder='<?php echo __("Min Price");?>'>
                                     </div>
@@ -79,7 +79,7 @@
                                         <input class="form-control" type="text" name="<?=SearchRequest::MAX_PRICE?>" placeholder='<?php echo __("Max Price");?>'>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="form-group">
                                         <select class="form-control" name="<?=SearchRequest::SORT_BY?>">
                                             <option value=""><?=__("Latest first")?></option>
