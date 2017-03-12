@@ -1,2 +1,5 @@
 tmp/cache/models/*
 tmp/cache/persistent/*
+tmp/logs/*
+Config/database.php
+Plugin/Properties/webroot/img/*
